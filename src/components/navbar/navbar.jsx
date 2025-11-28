@@ -31,7 +31,7 @@ function Navbar() {
           </Link>
         </div>
 
-        <div className="hamburger" onClick={toggleMenu}>
+        <div className="options" onClick={toggleMenu}>
           <span className={isOpen ? "active" : ""}></span>
           <span className={isOpen ? "active" : ""}></span>
           <span className={isOpen ? "active" : ""}></span>
