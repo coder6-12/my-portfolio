@@ -57,14 +57,14 @@
   width: 100%;
 }
 
-.hamburger {
+.options {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 6px;
 }
 
-.hamburger span {
+.options span {
   width: 25px;
   height: 3px;
   background-color: #ffffff;
@@ -73,7 +73,7 @@
 }
 
 @media (max-width: 768px) {
-  .hamburger {
+  .options {
     display: flex;
   }
 
