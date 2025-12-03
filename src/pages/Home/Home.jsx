@@ -25,7 +25,7 @@ function Home() {
 
             <div className="hero-image">
               <div className="profile-circle">
-                <img src="/professional-portfolio-photo.jpg" alt="Profile" />
+                <img src="src/assets/react.svg" alt="Profile" />
               </div>
             </div>
           </div>
