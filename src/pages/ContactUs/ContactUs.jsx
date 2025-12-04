@@ -1,0 +1,133 @@
+import { useState } from "react";
+import "./ContactUs.css";
+
+function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log("Form submitted:", formData)
+    setSubmitted(true)
+    setTimeout(() => {
+      setFormData({ name: "", email: "", subject: "", message: "" })
+      setSubmitted(false)
+    }, 3000)
+  }
+
+  return (
+    <main className="contact-page">
+      <section className="contact-hero">
+        <div className="container">
+          <h1>Get In Touch</h1>
+          <p>Have a project in mind? Let's work together to bring your vision to life.</p>
+        </div>
+      </section>
+
+      <section className="contact-content">
+        <div className="container">
+          <div className="contact-grid">
+            <div className="contact-info">
+              <div className="info-item">
+                <h3>Email</h3>
+                <a href="mailto:madhavmittal34@gmail.com">madhavmittal34@gmail.com</a>
+              </div>
+              <div className="info-item">
+                <h3>Phone</h3>
+                <a href="tel:+917814943916">+91 7814943916</a>
+              </div>
+              <div className="info-item">
+                <h3>Location</h3>
+                <p>Zirakpur, Punjab</p>
+              </div>
+              <div className="info-item">
+                <h3>Follow</h3>
+                <div className="social-links">
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    LinkedIn
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    Twitter
+                  </a>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  rows="6"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" className="btn-primary">
+                Send Message
+              </button>
+
+              {submitted && (
+                <div className="success-message">Message sent successfully! I'll get back to you soon.</div>
+              )}
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+export default Contact;
