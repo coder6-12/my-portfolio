@@ -1,8 +1,30 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
+import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva } from "react-icons/si";
 
 function Home() {
-  const skills = ["HTML", "CSS", "PHP", "REACT", "JAVASCRIPT", "TYPESCRIPT", "MONGODB", "EXPRESS.JS"];
+  const skillCategories = {
+    frontend: [
+      { name: "HTML", icon: <FaHtml5 /> },
+      { name: "CSS", icon: <FaCss3Alt /> },
+      { name: "JavaScript", icon: <FaJs /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "React", icon: <FaReact /> }
+    ],
+    backend: [
+      { name: "PHP", icon: <FaPhp /> },
+      { name: "Node.js", icon: <FaNodeJs /> },
+      { name: "Express.js", icon: <SiExpress /> },
+      { name: "MongoDB", icon: <SiMongodb /> }
+    ],
+    tools: [
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "GitHub", icon: <FaGithub /> },
+      { name: "Vercel", icon: <SiVercel /> },
+      { name: "Canva", icon: <SiCanva /> }
+    ]
+  };
 
   return (
     <main className="home">
@@ -25,21 +47,51 @@ function Home() {
 
             <div className="hero-image">
               <div className="profile-circle">
-                <img src="src/assets/react.svg" alt="Profile" />
+                <img src="src/assets/profile.jpg" alt="Profile" />
               </div>
             </div>
           </div>
         </div>
       </section>
-<h2>Skills</h2>
-      <section className="clients-section">
+
+      <div className="heading">Skills</div>
+      
+      <section className="skills-section">
         <div className="container">
-          <div className="clients-grid">
-            {skills.map((skills, index) => (
-              <div key={index} className="client-logo">
-                <span>{skills}</span>
-              </div>
-            ))}
+          <div className="skill-category">
+            <h3 className="category-title">Frontend</h3>
+            <div className="clients-grid">
+              {skillCategories.frontend.map((skill, index) => (
+                <div key={index} className="client-logo">
+                  <span className="skill-icon">{skill.icon}</span>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-category">
+            <h3 className="category-title">Backend</h3>
+            <div className="clients-grid">
+              {skillCategories.backend.map((skill, index) => (
+                <div key={index} className="client-logo">
+                  <span className="skill-icon">{skill.icon}</span>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="skill-category">
+            <h3 className="category-title">Tools</h3>
+            <div className="clients-grid">
+              {skillCategories.tools.map((skill, index) => (
+                <div key={index} className="client-logo">
+                  <span className="skill-icon">{skill.icon}</span>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
