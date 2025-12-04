@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
+import Profile from "../../assets/profile.jpg";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva ,SiMysql} from "react-icons/si";
 
@@ -48,7 +49,7 @@ function Home() {
 
             <div className="hero-image">
               <div className="profile-circle">
-                <img src="src/assets/profile.jpg" alt="Profile" />
+                <img src={Profile} alt="Profile" />
               </div>
             </div>
           </div>
