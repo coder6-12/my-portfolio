@@ -2,7 +2,7 @@ import "./About.css";
 
 function About() {
   const skills = [
-   "HTML", "CSS", "PHP", "REACT", "JAVASCRIPT", "TYPESCRIPT", "MONGODB", "EXPRESS.JS"
+   "HTML", "CSS", "PHP", "REACT", "JAVASCRIPT", "TYPESCRIPT", "MONGODB", "EXPRESS.JS", "NODE.JS", "MYSQL", "GIT", "GITHUB", "VERCEL", "CANVA"
   ]
 
   return (

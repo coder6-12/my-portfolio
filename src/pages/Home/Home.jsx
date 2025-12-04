@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva } from "react-icons/si";
+import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva ,SiMysql} from "react-icons/si";
 
 function Home() {
   const skillCategories = {
@@ -16,7 +16,8 @@ function Home() {
       { name: "PHP", icon: <FaPhp /> },
       { name: "Node.js", icon: <FaNodeJs /> },
       { name: "Express.js", icon: <SiExpress /> },
-      { name: "MongoDB", icon: <SiMongodb /> }
+      { name: "MongoDB", icon: <SiMongodb /> },
+      { name: "MySQL", icon: <SiMysql /> }
     ],
     tools: [
       { name: "Git", icon: <FaGitAlt /> },
