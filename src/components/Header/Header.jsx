@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import "./navbar.css";
+import "./Header.css";
 import { useState } from "react";
 
-function Navbar() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,7 +10,7 @@ function Navbar() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className="Header">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
           MADHAV
@@ -41,4 +41,4 @@ function Navbar() {
   )
 }
 
-export default Navbar;
+export default Header;
