@@ -1,9 +1,41 @@
 import "./About.css";
 
 function About() {
-  const skills = [
-   "HTML", "CSS", "PHP", "REACT", "JAVASCRIPT", "TYPESCRIPT", "MONGODB", "EXPRESS.JS", "NODE.JS", "MYSQL", "GIT", "GITHUB", "VERCEL", "CANVA"
-  ]
+  const education = [
+    {
+      degree: "Master of Computer Applications in Cyber Security",
+      institution: "Lovely Professional University, Phagwara, Punjab",
+      period: "2025-2027",
+      status: "Pursuing"
+    },
+    {
+      degree: "Bachelor of Computer Applications (BCA)",
+      institution: "GGDSD College, Chandigarh",
+      period: "2022-2025",
+      percentage: "81.19%"
+    },
+    {
+      degree: "Senior Secondary (XII)",
+      institution: "Government Model Sr Sec School Modern Complex Mani-Majra Chandigarh (CBSE)",
+      period: "2022",
+      percentage: "88%"
+    },
+    {
+      degree: "Secondary (X)",
+      institution: "DC Model Sr Sec School Sector 7 Panchkula Haryana (CBSE)",
+      period: "2020",
+      percentage: "91.20%"
+    }
+  ];
+
+  const experience = [
+    {
+      company: "Elite Web Technologies",
+      position: "Backend Developer Intern",
+      period: "June 2024 - Present",
+      description: "Currently working on backend development projects, contributing to web applications and learning industry best practices."
+    }
+  ];
 
   return (
     <main className="about-page">
@@ -45,17 +77,37 @@ function About() {
               </div>
               <div className="info-box">
                 <h3>Tech Stack</h3>
-                <p>REACT & more</p>
+                <p>MERN & more</p>
               </div>
             </div>
           </div>
 
-          <div className="skills-section">
-            <h2>Skills & Expertise</h2>
-            <div className="skills-grid">
-              {skills.map((skill, index) => (
-                <div key={index} className="skill-tag">
-                  {skill}
+          <div className="education-section">
+            <h2>Education</h2>
+            <div className="education-grid">
+              {education.map((edu, index) => (
+                <div key={index} className="education-card">
+                  <h3>{edu.degree}</h3>
+                  <p className="institution">{edu.institution}</p>
+                  <div className="edu-details">
+                    <span className="period">{edu.period}</span>
+                    {edu.percentage && <span className="percentage">Percentage: {edu.percentage}</span>}
+                    {edu.status && <span className="status">{edu.status}</span>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="experience-section">
+            <h2>Experience</h2>
+            <div className="experience-grid">
+              {experience.map((exp, index) => (
+                <div key={index} className="experience-card">
+                  <h3>{exp.position}</h3>
+                  <p className="company">{exp.company}</p>
+                  <p className="period">{exp.period}</p>
+                  <p className="description">{exp.description}</p>
                 </div>
               ))}
             </div>
@@ -63,7 +115,7 @@ function About() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
 export default About;
