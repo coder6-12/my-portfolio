@@ -43,7 +43,7 @@ function Projects() {
       description: "Modern, responsive portfolio website showcasing projects, skills, and experience with smooth animations and professional design.",
       category: "Frontend",
       tech: ["React", "CSS3", "React Router"],
-      githubLink: "https://github.com/yourusername/portfolio",
+      githubLink: "https://github.com/coder6-12/my-portfolio",
       type: "frontend"
     },
     {
@@ -73,7 +73,7 @@ function Projects() {
       description: "E-commerce platform for computer hardware and accessories with product catalog, shopping cart, and secure checkout process.",
       category: "Full Stack",
       tech: ["React", "Node.js", "MongoDB", "Express.js"],
-      githubLink: "https://github.com/yourusername/computer-store",
+      githubLink: "https://github.com/coder6-12/online-computerstore",
       type: "fullstack"
     },
   ]
