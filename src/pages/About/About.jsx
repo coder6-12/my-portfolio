@@ -31,7 +31,7 @@ function About() {
   const experience = [
     {
       company: "Elite Web Technologies",
-      position: "Backend Developer Intern",
+      position: "Backend Developer",
       period: "June 2024 - Present",
       description: "Currently working on backend development projects, contributing to web applications and learning industry best practices."
     }
