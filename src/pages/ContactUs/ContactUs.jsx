@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ContactUs.css";
+import { LiaLinkedinIn , LiaTwitter , LiaGithub } from "react-icons/lia";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -57,14 +58,14 @@ function Contact() {
               <div className="info-item">
                 <h3>Follow</h3>
                 <div className="social-links">
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    LinkedIn
+                  <a href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/" target="_blank" rel="noopener noreferrer">
+                   <LiaLinkedinIn/> LinkedIn
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    Twitter
+                  <a href="https://x.com/MadhavMm34" target="_blank" rel="noopener noreferrer">
+                   <LiaTwitter/> X(Twitter)
                   </a>
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    GitHub
+                  <a href="https://github.com/coder6-12" target="_blank" rel="noopener noreferrer">
+                   <LiaGithub/> GitHub
                   </a>
                 </div>
               </div>
