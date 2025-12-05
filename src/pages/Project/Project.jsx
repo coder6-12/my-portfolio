@@ -11,15 +11,15 @@ function Projects() {
         "A comprehensive health tracking application with user authentication, activity logging, and data visualization. Built with MERN stack.",
       category: "Full Stack",
       tech: ["React", "Node.js", "MongoDB", "Express.js"],
-      githubLink: "https://github.com/yourusername/health-tracker",
+      githubLink: "https://github.com/coder6-12/health-tracker",
       type: "fullstack"
     },
     {
       id: 2,
       number: "02",
-      title: "Tic-Tac Game",
+      title: "React Jump Game",
       description:
-        "An interactive gaming application inspired by TikTok's engaging interface. Features include real-time gameplay and social sharing.",
+        "An interactive gaming application inspired by Flappy bird. Features include real-time gameplay.",
       category: "Frontend",
       tech: ["React", "JavaScript", "CSS3"],
       githubLink: "https://github.com/yourusername/tiktok-game",
