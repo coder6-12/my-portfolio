@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 import Profile from "../../assets/profile.jpg";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva ,SiMysql} from "react-icons/si";
+import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva ,SiMysql , SiPostman} from "react-icons/si";
 
 function Home() {
   const skillCategories = {
@@ -24,7 +24,8 @@ function Home() {
       { name: "Git", icon: <FaGitAlt /> },
       { name: "GitHub", icon: <FaGithub /> },
       { name: "Vercel", icon: <SiVercel /> },
-      { name: "Canva", icon: <SiCanva /> }
+      { name: "Canva", icon: <SiCanva /> },
+      { name: "Postman", icon: <SiPostman /> }
     ]
   };
 
