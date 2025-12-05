@@ -1,5 +1,5 @@
 import "./footer.css";
-
+import { LiaLinkedinIn , LiaTwitter , LiaGithub } from "react-icons/lia";
 function Footer() {
   return (
     <footer className="footer">
@@ -31,18 +31,18 @@ function Footer() {
           <h4>Follow</h4>
           <ul>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                LinkedIn
+              <a href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/" target="_blank" rel="noopener noreferrer">
+               <LiaLinkedinIn /> LinkedIn
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                Instagram
+              <a href="https://x.com/MadhavMm34" target="_blank" rel="noopener noreferrer">
+               <LiaTwitter/> X
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                GitHub
+              <a href="https://github.com/coder6-12" target="_blank" rel="noopener noreferrer">
+               <LiaGithub/> GitHub
               </a>
             </li>
           </ul>
