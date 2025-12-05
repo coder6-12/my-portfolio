@@ -37,7 +37,7 @@ function Footer() {
             </li>
             <li>
               <a href="https://x.com/MadhavMm34" target="_blank" rel="noopener noreferrer">
-               <LiaTwitter/> X
+               <LiaTwitter/> X(Twitter)
               </a>
             </li>
             <li>
