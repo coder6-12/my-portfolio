@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
+import resume from "../../assets/MADHAVMITTAL.pdf";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  }
+
+  const handleResumeClick = () => {
+    window.open(resume, '_blank');
+    setIsOpen(false);
   }
 
   return (
@@ -26,6 +32,9 @@ function Header() {
           <Link to="/about" className="nav-link" onClick={() => setIsOpen(false)}>
             ABOUT
           </Link>
+          <button className="nav-link resume-link" onClick={handleResumeClick}>
+            RESUME
+          </button>
           <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>
             CONTACT
           </Link>
