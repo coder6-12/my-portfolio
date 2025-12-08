@@ -49,10 +49,10 @@ function Home() {
                 Hi, I'm Madhav, a passionate web developer dedicated to creating user-friendly digital experiences.
               </p>
               <div className="hero-buttons">
-                <Link to="/contact" className="btn-primary">
+                {/* <Link to="/contact" className="btn-primary">
                   Get In Touch
-                </Link>
-                <button onClick={handleDownloadCV} className="btn-secondary">
+                </Link> */}
+                <button onClick={handleDownloadCV} className="btn-primary">
                   Resume
                 </button>
               </div>
