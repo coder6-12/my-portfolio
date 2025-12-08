@@ -37,6 +37,32 @@ function About() {
     }
   ];
 
+  const coCurricular = [
+    {
+      title: "National Service Scheme (NSS)",
+      achievement: "B Category Certificate",
+      description: "Attended 2 NSS camps, actively participated in community service initiatives and social welfare programs."
+    },
+    {
+      title: "Debate Competitions",
+      achievement: "Podium Finish",
+      description: "Participated in various debate competitions at school level, demonstrating strong communication and analytical skills."
+    },
+    {
+      title: "Sports Activities",
+      achievement: "Inter House Competitions",
+      description: "Actively participated in inter house cricket and basketball competitions, showcasing teamwork and sportsmanship."
+    }
+  ];
+
+  const hobbies = [
+    { name: "Music Listening", icon: "🎵" },
+    { name: "Reading Books", icon: "📚" },
+    { name: "Playing Games", icon: "🎮" },
+    { name: "Travelling", icon: "✈️" },
+    { name: "Coding", icon: "💻" }
+  ];
+
   return (
     <main className="about-page">
       <section className="about-hero">
@@ -108,6 +134,31 @@ function About() {
                   <p className="company">{exp.company}</p>
                   <p className="period">{exp.period}</p>
                   <p className="description">{exp.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="cocurricular-section">
+            <h2>Co-Curricular Activities</h2>
+            <div className="cocurricular-grid">
+              {coCurricular.map((activity, index) => (
+                <div key={index} className="cocurricular-card">
+                  <h3>{activity.title}</h3>
+                  <p className="achievement">{activity.achievement}</p>
+                  <p className="description">{activity.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="hobbies-section">
+            <h2>Hobbies & Interests</h2>
+            <div className="hobbies-grid">
+              {hobbies.map((hobby, index) => (
+                <div key={index} className="hobby-card">
+                  <span className="hobby-icon">{hobby.icon}</span>
+                  <p className="hobby-name">{hobby.name}</p>
                 </div>
               ))}
             </div>
