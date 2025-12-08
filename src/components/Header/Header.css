@@ -57,7 +57,6 @@
   width: 100%;
 }
 
-/* Resume Button Specific Styling */
 .resume-link {
   background: none;
   border: none;
@@ -104,7 +103,7 @@
 
   .nav-menu.active {
     transform: translateX(0);
-    max-height: 350px; /* Increased to accommodate the extra menu item */
+    max-height: 350px;
   }
 
   .nav-link {

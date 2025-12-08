@@ -185,7 +185,6 @@
   line-height: 1.6;
 }
 
-/* Education Section */
 .education-section {
   margin-top: 100px;
   animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -320,7 +319,6 @@
   letter-spacing: 1px;
 }
 
-/* Experience Section */
 .experience-section {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -431,7 +429,6 @@
   font-weight: 500;
 }
 
-/* Co-Curricular Section */
 .cocurricular-section {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -535,7 +532,6 @@
   font-weight: 500;
 }
 
-/* Hobbies Section */
 .hobbies-section {
   margin-top: 100px;
   margin-bottom: 50px;
@@ -639,7 +635,6 @@
   margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 968px) {
   .about-hero {
     padding: 100px 20px 60px;
