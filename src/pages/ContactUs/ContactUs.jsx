@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./ContactUs.css";
-import { LiaLinkedinIn , LiaTwitter , LiaGithub } from "react-icons/lia";
+import { LiaLinkedinIn, LiaTwitter, LiaGithub } from "react-icons/lia";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -8,27 +8,47 @@ function Contact() {
     email: "",
     subject: "",
     message: "",
-  })
+  });
 
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const FORM_ENDPOINT = "https://formspree.io/f/xrbnakgv";
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setTimeout(() => {
-      setFormData({ name: "", email: "", subject: "", message: "" })
-      setSubmitted(false)
-    }, 3000)
-  }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitted(false);
+    setError("");
+
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setError("Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("Network error. Please try again.");
+    }
+  };
 
   return (
     <main className="contact-page">
@@ -45,7 +65,9 @@ function Contact() {
             <div className="contact-info">
               <div className="info-item">
                 <h3>Email</h3>
-                <a href="mailto:madhavmittal34@gmail.com">madhavmittal34@gmail.com</a>
+                <a href="mailto:madhavmittal34@gmail.com">
+                  madhavmittal34@gmail.com
+                </a>
               </div>
               <div className="info-item">
                 <h3>Phone</h3>
@@ -58,14 +80,26 @@ function Contact() {
               <div className="info-item">
                 <h3>Follow</h3>
                 <div className="social-links">
-                  <a href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/" target="_blank" rel="noopener noreferrer">
-                   <LiaLinkedinIn/> LinkedIn
+                  <a
+                    href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LiaLinkedinIn /> LinkedIn
                   </a>
-                  <a href="https://x.com/MadhavMm34" target="_blank" rel="noopener noreferrer">
-                   <LiaTwitter/> X(Twitter)
+                  <a
+                    href="https://x.com/MadhavMm34"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LiaTwitter /> X(Twitter)
                   </a>
-                  <a href="https://github.com/coder6-12" target="_blank" rel="noopener noreferrer">
-                   <LiaGithub/> GitHub
+                  <a
+                    href="https://github.com/coder6-12"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <LiaGithub /> GitHub
                   </a>
                 </div>
               </div>
@@ -121,14 +155,18 @@ function Contact() {
               </button>
 
               {submitted && (
-                <div className="success-message">Message sent successfully! I'll get back to you soon.</div>
+                <div className="success-message">
+                  Message sent successfully! I'll get back to you soon.
+                </div>
               )}
+
+              {error && <div className="error-message">{error}</div>}
             </form>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
 
 export default Contact;
