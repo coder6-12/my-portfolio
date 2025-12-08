@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Profile from "../../assets/profile.jpg";
+import resume from "../../assets/MADHAVMITTAL.pdf";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
-import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva ,SiMysql , SiPostman} from "react-icons/si";
+import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva, SiMysql, SiPostman } from "react-icons/si";
 
 function Home() {
   const skillCategories = {
@@ -29,6 +30,10 @@ function Home() {
     ]
   };
 
+  const handleDownloadCV = () => {
+    window.open(resume, '_blank');
+  };
+
   return (
     <main className="home">
       <section className="hero">
@@ -43,9 +48,14 @@ function Home() {
               <p className="hero-subtitle">
                 Hi, I'm Madhav, a passionate web developer dedicated to creating user-friendly digital experiences.
               </p>
-              <Link to="/contact" className="btn-primary">
-                Get In Touch
-              </Link>
+              <div className="hero-buttons">
+                <Link to="/contact" className="btn-primary">
+                  Get In Touch
+                </Link>
+                <button onClick={handleDownloadCV} className="btn-secondary">
+                  Download CV
+                </button>
+              </div>
             </div>
 
             <div className="hero-image">
