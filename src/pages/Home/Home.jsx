@@ -53,7 +53,7 @@ function Home() {
                   Get In Touch
                 </Link>
                 <button onClick={handleDownloadCV} className="btn-secondary">
-                  Download CV
+                  Resume
                 </button>
               </div>
             </div>
