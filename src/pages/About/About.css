@@ -431,6 +431,214 @@
   font-weight: 500;
 }
 
+/* Co-Curricular Section */
+.cocurricular-section {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+.cocurricular-section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.cocurricular-section h2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.cocurricular-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  border-radius: 2px;
+}
+
+.cocurricular-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.cocurricular-card {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 107, 53, 0.02) 100%);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cocurricular-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.cocurricular-card:hover::before {
+  left: 100%;
+}
+
+.cocurricular-card:hover {
+  transform: translateX(8px);
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: -8px 8px 24px rgba(255, 107, 53, 0.15);
+}
+
+.cocurricular-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.achievement {
+  font-weight: 600;
+  color: #cccccc;
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cocurricular-card .description {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+.hobbies-section h2 {
+  font-size: 42px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffffff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.hobbies-section h2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.hobbies-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  border-radius: 2px;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.hobby-card {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.05) 0%, rgba(255, 107, 53, 0.02) 100%);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 107, 53, 0.2);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hobby-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.hobby-card:hover::before {
+  left: 100%;
+}
+
+.hobby-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: 0 12px 24px rgba(255, 107, 53, 0.15);
+}
+
+.hobby-icon {
+  font-size: 48px;
+  transition: transform 0.4s ease;
+}
+
+.hobby-card:hover .hobby-icon {
+  transform: scale(1.2);
+}
+
+.hobby-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #cccccc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
   .about-hero {
@@ -464,19 +672,32 @@
   }
 
   .education-section h2,
-  .experience-section h2 {
+  .experience-section h2,
+  .cocurricular-section h2,
+  .hobbies-section h2 {
     font-size: 36px;
     margin-bottom: 40px;
   }
 
   .education-section,
-  .experience-section {
+  .experience-section,
+  .cocurricular-section,
+  .hobbies-section {
     margin-top: 80px;
   }
 
   .education-card,
-  .experience-card {
+  .experience-card,
+  .cocurricular-card {
     padding: 28px;
+  }
+
+  .hobby-card {
+    padding: 28px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .edu-details {
@@ -507,17 +728,38 @@
   }
 
   .education-section h2,
-  .experience-section h2 {
+  .experience-section h2,
+  .cocurricular-section h2,
+  .hobbies-section h2 {
     font-size: 28px;
   }
 
   .education-card,
-  .experience-card {
+  .experience-card,
+  .cocurricular-card {
     padding: 24px;
   }
 
+  .hobby-card {
+    padding: 24px;
+  }
+
+  .hobbies-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+  }
+
+  .hobby-icon {
+    font-size: 36px;
+  }
+
+  .hobby-name {
+    font-size: 14px;
+  }
+
   .education-card h3,
-  .experience-card h3 {
+  .experience-card h3,
+  .cocurricular-card h3 {
     font-size: 18px;
   }
 
@@ -528,7 +770,8 @@
   }
 
   .institution,
-  .company {
+  .company,
+  .achievement {
     font-size: 15px;
   }
 
