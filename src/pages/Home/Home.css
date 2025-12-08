@@ -401,8 +401,7 @@
     width: 100%;
   }
 
-  .btn-primary,
-  .btn-secondary {
+  .btn-primary {
     width: 100%;
     padding: 14px 36px;
     font-size: 14px;
@@ -468,8 +467,7 @@
     height: 220px;
   }
 
-  .btn-primary,
-  .btn-secondary {
+  .btn-primary {
     padding: 12px 28px;
     font-size: 13px;
   }
