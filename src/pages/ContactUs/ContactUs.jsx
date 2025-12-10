@@ -81,7 +81,7 @@ function Contact() {
                 <h3>Follow</h3>
                 <div className="social-links">
                   <a
-                    href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/"
+                    href="https://www.linkedin.com/in/madhav-mittal34/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
