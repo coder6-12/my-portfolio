@@ -31,7 +31,7 @@ function Footer() {
           <h4>Follow</h4>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/madhav-mittal-8aaa562ab/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/madhav-mittal34/" target="_blank" rel="noopener noreferrer">
                <LiaLinkedinIn /> LinkedIn
               </a>
             </li>
