@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Home.css";
 import Profile from "../../assets/profile.jpg";
-import resume from "../../assets/MADHAVMITTAL.pdf";
+import resume from "../../assets/resume.pdf";
 import { FaHtml5, FaCss3Alt, FaReact, FaJs, FaPhp, FaNodeJs, FaGitAlt, FaGithub } from "react-icons/fa";
 import { SiTypescript, SiMongodb, SiExpress, SiVercel, SiCanva, SiMysql, SiPostman } from "react-icons/si";
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
-import resume from "../../assets/MADHAVMITTAL.pdf";
+import resume from "../../assets/resume.pdf";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
