@@ -22,7 +22,7 @@ function Projects() {
         "An interactive gaming application inspired by Flappy bird. Features include real-time gameplay.",
       category: "Frontend",
       tech: ["React", "JavaScript", "CSS3"],
-      githubLink: "https://github.com/coder6-12/waiting",
+      githubLink: "https://github.com/coder6-12/react-jumpgame",
       type: "frontend"
     },
     {
@@ -33,7 +33,7 @@ function Projects() {
         "Complete learning management system with course creation, student enrollment, progress tracking, and payment integration.",
       category: "Full Stack",
       tech: ["React", "Node.js", "MongoDB", "Express.js"],
-      githubLink: "https://github.com/coder6-12/waiting",
+      githubLink: "https://github.com/coder6-12/online-course-management-system",
       type: "fullstack"
     },
     {
@@ -53,7 +53,7 @@ function Projects() {
       description: "Robust backend API for hotel operations including room booking, guest management, billing, and staff administration.",
       category: "Backend",
       tech: ["Node.js", "Express.js", "MongoDB"],
-      githubLink: "https://github.com/coder6-12/waiting",
+      githubLink: "https://github.com/coder6-12/hotel-management",
       type: "backend"
     },
     {
@@ -63,7 +63,7 @@ function Projects() {
       description: "Backend infrastructure for job posting platform with user authentication, job listings, applications, and employer dashboard.",
       category: "Backend",
       tech: ["Node.js", "Express.js", "MongoDB"],
-      githubLink: "https://github.com/coder6-12/waiting",
+      githubLink: "https://github.com/coder6-12/job-portal",
       type: "backend"
     },
     {
