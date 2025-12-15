@@ -12,6 +12,7 @@ function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [copiedItem, setCopiedItem] = useState(null);
 
   const FORM_ENDPOINT = "https://formspree.io/f/xrbnakgv";
 
@@ -50,6 +51,16 @@ function Contact() {
     }
   };
 
+  const copyToClipboard = async (text, type) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedItem(type);
+      setTimeout(() => setCopiedItem(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
+
   return (
     <main className="contact-page">
       <section className="contact-hero">
@@ -65,13 +76,29 @@ function Contact() {
             <div className="contact-info">
               <div className="info-item">
                 <h3>Email</h3>
-                <a href="mailto:madhavmittal34@gmail.com">
-                  madhavmittal34@gmail.com
-                </a>
+                <div className="contact-wrapper">
+                  <a href="mailto:madhavmittal34@gmail.com">
+                    madhavmittal34@gmail.com
+                  </a>
+                  <button
+                    className="copy-btn"
+                    onClick={() => copyToClipboard('madhavmittal34@gmail.com', 'email')}
+                  >
+                    {copiedItem === 'email' ? '✓ Copied!' : 'Copy'}
+                  </button>
+                </div>
               </div>
               <div className="info-item">
                 <h3>Phone</h3>
-                <a href="tel:+917814943916">+91 7814943916</a>
+                <div className="contact-wrapper">
+                  <a href="tel:+917814943916">+91 7814943916</a>
+                  <button
+                    className="copy-btn"
+                    onClick={() => copyToClipboard('+917814943916', 'phone')}
+                  >
+                    {copiedItem === 'phone' ? '✓ Copied!' : 'Copy'}
+                  </button>
+                </div>
               </div>
               <div className="info-item">
                 <h3>Location</h3>
@@ -92,7 +119,7 @@ function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <LiaTwitter /> X(Twitter)
+                    <LiaTwitter /> X
                   </a>
                   <a
                     href="https://github.com/coder6-12"

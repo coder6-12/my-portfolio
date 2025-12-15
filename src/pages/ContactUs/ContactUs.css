@@ -166,6 +166,41 @@
   color: #ff6b35;
 }
 
+.contact-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-btn {
+  opacity: 0;
+  padding: 6px 14px;
+  background: rgba(255, 107, 53, 0.15);
+  color: #ff6b35;
+  border: 1px solid rgba(255, 107, 53, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.info-item:hover .copy-btn {
+  opacity: 1;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 107, 53, 0.25);
+  border-color: #ff6b35;
+  transform: translateY(-1px);
+}
+
+.copy-btn:active {
+  transform: scale(0.95);
+}
+
 .social-links {
   display: flex;
   gap: 20px;
@@ -173,7 +208,7 @@
 }
 
 .social-links a {
-  padding: 10px 10px;
+  padding: 10px 16px;
   background: rgba(255, 107, 53, 0.1);
   border: 1px solid rgba(255, 107, 53, 0.3);
   border-radius: 8px;
@@ -182,7 +217,13 @@
   color: #ff6b35;
   text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a svg {
+  font-size: 18px;
 }
 
 .social-links a:hover {
@@ -301,6 +342,19 @@
   border: 2px solid rgba(76, 175, 80, 0.4);
   border-radius: 12px;
   color: #4caf50;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  animation: slideInUp 0.4s ease-out;
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.2) 0%, rgba(244, 67, 54, 0.1) 100%);
+  border: 2px solid rgba(244, 67, 54, 0.4);
+  border-radius: 12px;
+  color: #f44336;
   font-size: 15px;
   font-weight: 600;
   text-align: center;
