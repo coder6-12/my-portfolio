@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #0a0a0a;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 main {
@@ -29,8 +30,8 @@ main {
 }
 
 .btn-primary {
-  background-color: #ff6b35;
-  color: #ffffff;
+  background-color: var(--accent-color);
+  color: var(--text-color);
   padding: 12px 32px;
   border-radius: 4px;
   font-size: 16px;
@@ -40,12 +41,12 @@ main {
 }
 
 .btn-primary:hover {
-  background-color: #ff5520;
+  background-color: var(--accent-hover);
 }
 
 .divider {
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(to right, transparent, var(--divider-color), transparent);
   margin: 40px 0;
 }
 

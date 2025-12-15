@@ -2,9 +2,13 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
 import resume from "../../assets/resume.pdf";
+import { useTheme } from "../../ThemeContext";
+import { FiSun } from "react-icons/fi";
+import { BsMoonFill } from "react-icons/bs";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -38,6 +42,9 @@ function Header() {
           <Link to="/contact" className="nav-link" onClick={() => setIsOpen(false)}>
             CONTACT
           </Link>
+          <button className="nav-link theme-toggle" onClick={toggleTheme}>
+            {theme === 'light' ? <BsMoonFill /> : <FiSun />}
+          </button>
         </div>
 
         <div className="options" onClick={toggleMenu}>

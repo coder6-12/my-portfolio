@@ -7,6 +7,7 @@ import About from "./pages/About/About";
 import Contact from "./pages/ContactUs/ContactUs";
 import "./App.css";
 import { useEffect } from "react";
+import { ThemeProvider } from "./ThemeContext";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -18,29 +19,31 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="app">
-        <Header />
-        <main>
-          <Routes>
-            <Route 
-            path="/" 
-            element={<Home />} />
-            <Route 
-            path="/projects" 
-            element={<Projects />} />
-            <Route 
-            path="/about" 
-            element={<About />} />
-            <Route 
-            path="/contact" 
-            element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="app">
+          <Header />
+          <main>
+            <Routes>
+              <Route 
+              path="/" 
+              element={<Home />} />
+              <Route 
+              path="/projects" 
+              element={<Projects />} />
+              <Route 
+              path="/about" 
+              element={<About />} />
+              <Route 
+              path="/contact" 
+              element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </ThemeProvider>
   )
 }
 
