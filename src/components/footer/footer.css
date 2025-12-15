@@ -48,6 +48,13 @@
   color: #aaaaaa;
   font-size: 14px;
   transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-section a svg {
+  font-size: 18px;
 }
 
 .footer-section a:hover {
