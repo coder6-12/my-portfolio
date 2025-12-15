@@ -1,4 +1,5 @@
 import "./About.css";
+import { BiMusic,BiBook,BiGame,BiTrain, BiCode } from "react-icons/bi";
 
 function About() {
   const education = [
@@ -56,11 +57,11 @@ function About() {
   ];
 
   const hobbies = [
-    { name: "Music Listening", icon: "🎵" },
-    { name: "Reading Books", icon: "📚" },
-    { name: "Playing Games", icon: "🎮" },
-    { name: "Travelling", icon: "✈️" },
-    { name: "Coding", icon: "💻" }
+    { name: "Music Listening", icon: <BiMusic/> },
+    { name: "Reading Books", icon: <BiBook/> },
+    { name: "Playing Games", icon: <BiGame/> },
+    { name: "Travelling", icon: <BiTrain/> },
+    { name: "Coding", icon: <BiCode/> }
   ];
 
   return (
