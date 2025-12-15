@@ -1,10 +1,11 @@
 .Header {
-  background-color: #0a0a0a;
+  background-color: var(--bg-color);
   padding: 20px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--divider-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .nav-container {
@@ -20,7 +21,7 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 3px;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .nav-menu {
@@ -30,7 +31,7 @@
 }
 
 .nav-link {
-  color: #ffffff;
+  color: var(--text-color);
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -39,7 +40,7 @@
 }
 
 .nav-link:hover {
-  color: #ff6b35;
+  color: var(--accent-color);
 }
 
 .nav-link::after {
@@ -49,7 +50,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #ff6b35;
+  background-color: var(--accent-color);
   transition: width 0.3s ease;
 }
 
@@ -66,6 +67,20 @@
   text-decoration: none;
 }
 
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: inherit;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
 .options {
   display: none;
   flex-direction: column;
@@ -76,7 +91,7 @@
 .options span {
   width: 25px;
   height: 3px;
-  background-color: #ffffff;
+  background-color: var(--text-color);
   transition: 0.3s;
   border-radius: 2px;
 }
@@ -91,7 +106,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    background-color: #1a1a1a;
+    background-color: var(--bg-color);
     flex-direction: column;
     gap: 20px;
     padding: 20px;
@@ -99,6 +114,7 @@
     transition: transform 0.3s ease;
     max-height: 0;
     overflow: hidden;
+    border-top: 1px solid var(--divider-color);
   }
 
   .nav-menu.active {

@@ -9,7 +9,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: var(--gradient-bg);
 }
 
 .hero::before {
@@ -29,7 +29,7 @@
   font-size: 48px;
   font-weight: 800;
   margin: 80px 0 60px;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -46,7 +46,7 @@
   transform: translateX(-50%);
   width: 100px;
   height: 4px;
-  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
   border-radius: 2px;
 }
 
@@ -87,7 +87,7 @@
   line-height: 1.1;
   margin-bottom: 30px;
   letter-spacing: 3px;
-  background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--light-text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -96,7 +96,7 @@
 
 .hero-subtitle {
   font-size: 18px;
-  color: #b0b0b0;
+  color: var(--muted-text);
   margin-bottom: 40px;
   line-height: 1.8;
   max-width: 500px;
@@ -112,8 +112,8 @@
 .btn-primary {
   display: inline-block;
   padding: 16px 40px;
-  background: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%);
-  color: #ffffff;
+  background: var(--gradient-primary);
+  color: var(--text-color);
   text-decoration: none;
   border: 2px solid transparent;
   border-radius: 50px;
@@ -236,14 +236,14 @@
 
 .skills-section {
   padding: 80px 20px;
-  background: linear-gradient(180deg, #0a0a0a 0%, #0f0f0f 100%);
+  background: linear-gradient(180deg, var(--bg-color) 0%, var(--tertiary-bg) 100%);
 }
 
 .clients-section {
   padding: 80px 20px;
-  background-color: #0f0f0f;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--tertiary-bg);
+  border-top: 1px solid var(--divider-color);
+  border-bottom: 1px solid var(--divider-color);
 }
 
 .clients-grid {
@@ -279,7 +279,7 @@
   font-weight: 700;
   margin-bottom: 40px;
   text-align: center;
-  color: #ff6b35;
+  color: var(--accent-color);
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -295,7 +295,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, transparent, #ff6b35, transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
   border-radius: 2px;
 }
 
@@ -325,7 +325,7 @@
 
 .skill-icon {
   font-size: 3rem;
-  color: #ff6b35;
+  color: var(--accent-color);
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
@@ -338,7 +338,7 @@
 .skill-name {
   font-size: 14px;
   font-weight: 600;
-  color: #cccccc;
+  color: var(--light-text);
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
@@ -346,13 +346,13 @@
 }
 
 .client-logo:hover .skill-name {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .cta-section {
   padding: 100px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, var(--tertiary-bg) 0%, var(--secondary-bg) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -372,7 +372,7 @@
   font-weight: 800;
   margin-bottom: 50px;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, #ffffff 0%, #aaaaaa 100%);
+  background: linear-gradient(135deg, var(--text-color) 0%, var(--muted-text) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

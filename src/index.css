@@ -4,11 +4,44 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #0a0a0a;
+  --text-color: #ffffff;
+  --accent-color: #ff6b35;
+  --accent-hover: #ff5520;
+  --divider-color: rgba(255, 255, 255, 0.2);
+  --secondary-bg: #1a1a1a;
+  --tertiary-bg: #0f0f0f;
+  --muted-text: #b0b0b0;
+  --light-text: #cccccc;
+  --dark-text: #666666;
+  --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%);
+  --gradient-secondary: linear-gradient(135deg, #ffffff 0%, #ff6b35 100%);
+  --gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.light {
+  --bg-color: #ffffff;
+  --text-color: #0a0a0a;
+  --accent-color: #ff6b35;
+  --accent-hover: #ff5520;
+  --divider-color: rgba(0, 0, 0, 0.2);
+  --secondary-bg: #f5f5f5;
+  --tertiary-bg: #e0e0e0;
+  --muted-text: #666666;
+  --light-text: #333333;
+  --dark-text: #999999;
+  --gradient-primary: linear-gradient(135deg, #ff6b35 0%, #ff8c61 100%);
+  --gradient-secondary: linear-gradient(135deg, #0a0a0a 0%, #ff6b35 100%);
+  --gradient-bg: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html,
