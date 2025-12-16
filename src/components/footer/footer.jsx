@@ -1,5 +1,6 @@
 import "./footer.css";
 import { LiaLinkedinIn , LiaTwitter , LiaGithub } from "react-icons/lia";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
@@ -13,16 +14,16 @@ function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/projects">Projects</a>
+              <Link to="/projects">Projects</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
