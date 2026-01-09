@@ -33,8 +33,14 @@ function About() {
     {
       company: "Elite Web Technologies",
       position: "Backend Developer",
-      period: "June 2024 - Present",
+      period: "June 2025 - October 2025",
       description: "Currently working on backend development projects, contributing to web applications and learning industry best practices."
+    },
+    {
+      company: "Elite Web Technologies",
+      position: "Frontend Developer",
+      period: "November 2025 - Present",
+      description: "Focused on building responsive and user-friendly interfaces using modern frontend technologies. Collaborating with designers and backend developers to translate requirements into clean, interactive UI components while improving performance and usability across web applications."
     }
   ];
 
