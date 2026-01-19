@@ -76,10 +76,21 @@ function Projects() {
       githubLink: "https://github.com/coder6-12/online-computerstore",
       type: "fullstack"
     },
+    {
+      id: 8,
+      number: "08",
+      title: "Task & Expense Tracker",
+      description:
+        "A fully functional task and expense management application with state management using Redux. Features task tracking, expense logging, responsive UI, and smooth user experience across devices.",
+      category: "Frontend",
+      tech: ["React", "Redux", "JavaScript", "CSS3"],
+      githubLink: "https://github.com/coder6-12/task-expense-tracker",
+      type: "frontend"
+    }
   ]
 
   const getProjectIcon = (type) => {
-    switch(type) {
+    switch (type) {
       case 'fullstack':
         return <FaLaptopCode />
       case 'frontend':
@@ -118,9 +129,9 @@ function Projects() {
                       <span key={index} className="tech-tag">{tech}</span>
                     ))}
                   </div>
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="github-link"
                   >
