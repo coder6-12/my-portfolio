@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { useState } from "react";
-import resume from "../../assets/resume.pdf";
+import resume from "../../assets/madhav-resume.pdf";
 import { useTheme } from "../../ThemeContext";
 import { FiSun } from "react-icons/fi";
 import { BsMoonFill } from "react-icons/bs";
